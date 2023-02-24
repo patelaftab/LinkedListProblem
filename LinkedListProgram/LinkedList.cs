@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LinkedListProgram
 {
@@ -30,9 +31,23 @@ namespace LinkedListProgram
         public void AddFirst(int data)
         {
             Node newNode = new Node(data);
+            if (head == null)
+            {
+                this.head = newNode;
+            }
+            else
             newNode.next = head;
             head = newNode;
             Console.WriteLine("{0} New node Added :", newNode.data);
+        }
+        public void RemoveFirst()
+        {
+            if(head==null)
+            {
+                Console.WriteLine(  "Linkedlist Is Empty");
+            }
+            this.head=this.head.next;
+            Console.WriteLine("First Element Is Removed");
         }
         public void Display()
         {
