@@ -49,6 +49,27 @@ namespace LinkedListProgram
             this.head=this.head.next;
             Console.WriteLine("First Element Is Removed");
         }
+        public void RemoveLast()
+        {
+            if(head==null)
+            {
+                Console.WriteLine("Linked List Is Empty");
+            }
+            if(head.next==null)
+            {
+                head = null;
+            }
+            else
+            {
+                Node lastNode = this.head;
+                while(lastNode.next.next != null)
+                {
+                    lastNode = lastNode.next;
+                }
+                lastNode.next = null;
+                Console.WriteLine("The Last Element IS removed");
+            }
+        }
         public void Display()
         {
             Node temp = this.head;

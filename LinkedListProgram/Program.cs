@@ -18,7 +18,8 @@ namespace LinkedListProgram
                     "Choose 1: For Creating Simple LinkedList\n"+
                     "Choose 2:For Adding First Element\n"+
                     "Choose 3:To Delete Fist Element\n"+
-                    "Choose 4:To Stop Program");
+                    "Choose 4:To Delete Last Element\n"+
+                    "Choose 5: To Stop Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -42,6 +43,13 @@ namespace LinkedListProgram
                         linkedList.Display();
                         break;
                     case 4:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLast();
+                        linkedList.Display();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                     default:
