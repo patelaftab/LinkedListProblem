@@ -15,8 +15,9 @@ namespace LinkedListProgram
             while (flag)
             {
                 Console.WriteLine("Enter An Option\n" +
-                    "CHoose 1: For Creating Simple LinkedList\n"+
-                    "Choose 2:To Stop Running");
+                    "Choose 1: For Creating Simple LinkedList\n"+
+                    "Choose 2:For Adding First Element\n"+
+                    "Choose 3:To Stop Running");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +28,12 @@ namespace LinkedListProgram
                         linkedList.Display();   
                         break;
                     case 2:
+                        linkedList.AddFirst(70);
+                        linkedList.AddFirst(30);
+                        linkedList.AddFirst(56);
+                        linkedList.Display();
+                        break;
+                    case 3:
                         flag = false;
                         break;
                     default:

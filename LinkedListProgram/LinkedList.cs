@@ -27,6 +27,13 @@ namespace LinkedListProgram
             }
             Console.WriteLine("{0} Values Are Inserted",node.data);
         }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} New node Added :", newNode.data);
+        }
         public void Display()
         {
             Node temp = this.head;
