@@ -40,6 +40,10 @@ namespace LinkedListProgram
             head = newNode;
             Console.WriteLine("{0} New node Added :", newNode.data);
         }
+        public void Append(int data)
+        {
+            Add(data);
+        }
         public void RemoveFirst()
         {
             if(head==null)
