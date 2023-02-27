@@ -94,6 +94,29 @@ namespace LinkedListProgram
                 Console.WriteLine("The Last Element IS removed");
             }
         }
+
+        public void SearchElement(int data)
+        {
+            bool flag = false;
+            if (head != null)
+            {
+                int count = 0;
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == data)
+                    {
+                        flag = true;
+                        count++;
+                    }
+                    temp = temp.next;
+                }
+                if (flag)
+                {
+                    Console.WriteLine("Value {0} Is Present {0} Times", count);
+                }
+            }
+        }
         public void Display()
         {
             Node temp = this.head;

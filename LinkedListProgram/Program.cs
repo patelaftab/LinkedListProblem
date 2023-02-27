@@ -22,6 +22,7 @@ namespace LinkedListProgram
                     "Choose 4:To Insert Between Nodes\n" +
                     "Choose 5:To Delete First Element\n" +
                     "Choose 6:To Delete Last Element\n" +
+                    "Choose 7: To Search Element\n" +
                     "Choose 10:To Stop Running Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -64,7 +65,13 @@ namespace LinkedListProgram
                         linkedList.RemoveLast();
                         linkedList.Display();
                         break;
-
+                    case 7:
+                        linkedList.SearchElement(56);
+                        linkedList.SearchElement(30);
+                        linkedList.SearchElement(70);
+                        linkedList.SearchElement(30);
+                        linkedList.Display();
+                        break;
                     case 10:
                         flag = false;
                         break;
