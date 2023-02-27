@@ -11,16 +11,18 @@ namespace LinkedListProgram
         static void Main(string[] args)
         {
             LinkedList linkedList = new LinkedList();
+            LinkedListStack stack = new LinkedListStack();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("Enter An Option\n" +
-                    "Choose 1: For Creating Simple LinkedList\n"+
-                    "Choose 2:For Adding First Element\n"+
-                    "Choose 3:For Creating Linkedist By Append\n"+
-                    "Choose 3:To Delete First Element\n"+
-                    "Choose 4:To Delete Last Element\n"+
-                    "Choose 5: To Stop Program");
+                    "Choose 1: For Creating Simple LinkedList\n" +
+                    "Choose 2:For Adding First Element\n" +
+                    "Choose 3:For Creating Linkedist By Append\n" +
+                    "Choose 4:To Insert Between Nodes\n" +
+                    "Choose 5:To Delete First Element\n" +
+                    "Choose 6:To Delete Last Element\n" +
+                    "Choose 10:To Stop Running Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -28,7 +30,7 @@ namespace LinkedListProgram
                         linkedList.Add(56);
                         linkedList.Add(30);
                         linkedList.Add(70);
-                        linkedList.Display();   
+                        linkedList.Display();
                         break;
                     case 2:
                         linkedList.AddFirst(70);
@@ -43,20 +45,27 @@ namespace LinkedListProgram
                         linkedList.Display();
                         break;
                     case 4:
-                        linkedList.Add(56);
-                        linkedList.Add(30);
+                        linkedList.AddFirst(56);
                         linkedList.Add(70);
-                        linkedList.RemoveFirst();
+                        linkedList.InsertBetween(56, 30, 70);
                         linkedList.Display();
                         break;
                     case 5:
                         linkedList.Add(56);
                         linkedList.Add(30);
                         linkedList.Add(70);
-                        linkedList.RemoveLast();
+                        linkedList.RemoveFirst();
                         linkedList.Display();
                         break;
                     case 6:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLast();
+                        linkedList.Display();
+                        break;
+
+                    case 10:
                         flag = false;
                         break;
                     default:

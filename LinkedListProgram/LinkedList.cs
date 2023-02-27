@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,25 @@ namespace LinkedListProgram
         public void Append(int data)
         {
             Add(data);
+        }
+        public void InsertBetween(int insertFirst,int data,int insertLast)
+        {
+            Node newNode = new Node(data);
+            Node temp = head;
+            if(temp==null)
+            {
+                Console.WriteLine("Linked List Is Empty");
+            }
+            else
+            {
+                    if(temp.data==insertFirst&&temp.next.data==insertLast)
+                    {
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        Console.WriteLine("{0} IS Inserted Between :",newNode.data);
+                    }
+                    temp = temp.next;
+            }
         }
         public void RemoveFirst()
         {
