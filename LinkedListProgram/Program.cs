@@ -24,6 +24,7 @@ namespace LinkedListProgram
                     "Choose 6:To Delete Last Element\n" +
                     "Choose 7: To Search Element\n" +
                     "Choose 8: To Check The Counts\n" +
+                    "Choose 9: TO Perform Stack Push Operation" +
                     "Choose 10:To Stop Running Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
@@ -79,6 +80,12 @@ namespace LinkedListProgram
                         linkedList.Add(70);
                         linkedList.Add(30);
                         linkedList.Size();
+                        break;
+                    case 9:
+                        stack.Push(56);
+                        stack.Push(30);
+                        stack.Push(70);
+                        stack.Display();
                         break;
                     case 10:
                         flag = false;
