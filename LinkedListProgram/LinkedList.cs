@@ -117,6 +117,22 @@ namespace LinkedListProgram
                 }
             }
         }
+        public void Size()
+        {
+            Node temp = head;
+            int count = 0;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List IS enpty");
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine("The Item is Prenst {0} Times", count);
+        }
         public void Display()
         {
             Node temp = this.head;
