@@ -24,7 +24,22 @@ namespace LinkedListProgram
             }
             Console.WriteLine(data + "is Added to Queue");
         }
-
+        public void Dequeue()
+        {
+            if (tail != null)
+            {
+                if (tail.next == null)
+                    tail = null;
+                else
+                {
+                    Node temp = tail;
+                    while (temp.next.next != null)
+                        temp = temp.next;
+                    temp.next = null;
+                    head = temp;
+                }
+            }
+        }
 
         public void Display()
         {
