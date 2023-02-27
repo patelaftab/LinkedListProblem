@@ -88,6 +88,10 @@ namespace LinkedListProgram
                         stack.Display();
                         break;
                     case 10:
+                        stack.Pop();
+                        stack.Display();
+                        break;
+                    case 11:
                         flag = false;
                         break;
                     default:

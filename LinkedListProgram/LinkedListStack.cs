@@ -26,6 +26,17 @@ namespace LinkedListProgram
             Console.WriteLine(data);
             //linkedList.Add(data);
         }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("value poped is " + this.top.data);
+            this.top = this.top.next;
+            //linkedList.RemoveLastNode();
+        }
 
         public void Display()
         {
