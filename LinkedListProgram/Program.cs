@@ -12,6 +12,7 @@ namespace LinkedListProgram
         {
             LinkedList linkedList = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedListQueue queue = new LinkedListQueue();
             bool flag = true;
             while (flag)
             {
@@ -24,8 +25,10 @@ namespace LinkedListProgram
                     "Choose 6:To Delete Last Element\n" +
                     "Choose 7: To Search Element\n" +
                     "Choose 8: To Check The Counts\n" +
-                    "Choose 9: TO Perform Stack Push Operation" +
-                    "Choose 10:To Stop Running Program");
+                    "Choose 9: TO Perform Stack Push Operation\n" +
+                    "Choose 10: To Perform Pop operation \n"+
+                    "Choose 11:To perform Enqueue operation in Queue\n"+
+                    "Choose 12:To Stop Running Program");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -92,6 +95,12 @@ namespace LinkedListProgram
                         stack.Display();
                         break;
                     case 11:
+                        queue.Enqueue(10);
+                        queue.Enqueue(20);
+                        queue.Enqueue(30);
+                        queue.Display();
+                        break;
+                    case 12:
                         flag = false;
                         break;
                     default:
